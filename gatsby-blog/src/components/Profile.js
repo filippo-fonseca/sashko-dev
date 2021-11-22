@@ -75,7 +75,7 @@ function Profile({ post }) {
           {", "}
           {post.frontmatter.date}
         </p>
-
+        buenas
         <SocialIcons {...{ github, linkedin, twitter }} />
       </div>
     </div>
