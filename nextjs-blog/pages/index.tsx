@@ -81,18 +81,17 @@ const BlogPage = ({ posts }: Props) => {
                                         >
                                             <BlogCard>
                                                 <h2>{post.title}</h2>
-
                                                 <p>{post.intro}</p>
                                             </BlogCard>
                                         </a>
                                     </Link>
                                 );
                             })}
+                            <Credits />
                         </div>
                     </Home>
                 </div>
             </div>
-            <Credits />
         </>
     );
 };

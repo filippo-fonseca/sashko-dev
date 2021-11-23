@@ -25,16 +25,17 @@ export const BlogCard = styled.div`
     border-radius: 5px;
 
     h2 {
-        font-size: 0.95rem;
+        font-weight: 700;
+        color: #404eb3;
+        font-family: "Merriweather", serif;
+
+        margin-top: 1.125rem;
+        margin-bottom: 0.375rem;
+        font-size: 21px;
+        line-height: 1.5rem;
     }
 
     p {
-        font-size: 0.95rem;
-    }
-
-    :hover {
-        h2 {
-            text-decoration: underline;
-        }
+        margin-top: 0;
     }
 `;
