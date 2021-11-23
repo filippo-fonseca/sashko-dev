@@ -43,10 +43,10 @@ const PostPage = ({ post }: Props) => {
     return (
         <>
             <Seo
-                title={`${post.title} | Filippo Fonseca`}
+                title={`${post.title}`}
                 description={post.intro ?? undefined}
-                keywords={["blog", "blog filippo fonseca", ...keywords]}
-                url={`https://caspertheghost.me/blog/${post.slug}`}
+                keywords={["blog", "blog sashko stubailo", ...keywords]}
+                url={`https://sashko.dev/${post.slug}`}
             />
             <Head>
                 <link
@@ -57,7 +57,7 @@ const PostPage = ({ post }: Props) => {
                 />
 
                 {/* why not "author": https://github.com/postlight/mercury-parser/blob/HEAD/src/extractors/generic/author/constants.js#L5 */}
-                <meta name="authors" content="Casper Iversen" />
+                <meta name="authors" content="Sashko Stubailo" />
                 <meta name="created" content={post.createdAt} />
             </Head>
             <div

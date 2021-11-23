@@ -37,10 +37,11 @@ const BlogPage = ({ posts }: Props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Seo
-                title="All posts"
+                title="Sashko Stubailo | All Posts"
                 url="https://sashko.dev"
                 keywords={["blog sashko stubailo", "sashko stubailo blog"]}
-                description="My thoughts on the world - engineering, entrepreneurship, productivity, personal development, tech, and much more - Filippo Fonseca."
+                description="Engineering manager at Stripe. Previously, open source eng manager at
+                Apollo GraphQL and Meteor."
             />
             <div
                 style={{
