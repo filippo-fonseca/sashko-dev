@@ -80,8 +80,32 @@ const BlogPage = ({ posts }: Props) => {
                                             className={""}
                                         >
                                             <BlogCard>
-                                                <h2>{post.title}</h2>
-                                                <p>{post.intro}</p>
+                                                <div
+                                                    style={{ display: "flex" }}
+                                                >
+                                                    <div
+                                                        style={{
+                                                            height: "6rem",
+                                                            width: "6rem",
+                                                            marginRight:
+                                                                "1.5rem",
+                                                        }}
+                                                    >
+                                                        <img
+                                                            src="https://sashko.dev/static/f685a542f579a4f9a2a0eb05f7b60fcc/8ba1e/autocode.png"
+                                                            height="100%"
+                                                            width="100%"
+                                                            style={{
+                                                                alignSelf:
+                                                                    "center",
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <div>
+                                                        <h2>{post.title}</h2>
+                                                        <p>{post.intro}</p>
+                                                    </div>
+                                                </div>
                                             </BlogCard>
                                         </a>
                                     </Link>

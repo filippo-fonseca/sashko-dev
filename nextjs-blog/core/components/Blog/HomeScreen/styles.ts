@@ -18,7 +18,6 @@ export const Wrapper = styled.div`
 
 export const BlogCard = styled.div`
     background: transparent;
-    border: 2px solid #f40076;
     padding: 0.75rem;
     height: fit-content;
     width: fit-content;
