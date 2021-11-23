@@ -7,6 +7,42 @@ import { getAllItems, getItemBySlug } from "../core/lib/blog";
 import { Seo } from "../core/components/Seo";
 import { Markdown } from "../core/components/Markdown";
 import { TextWrapper } from ".";
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+    padding: 2.25rem 1.125rem;
+    color: hsla(0, 0%, 0%, 0.8);
+
+    h1 {
+        font-family: "Merriweather", serif;
+        font-weight: 700;
+        font-kerning: normal;
+        font-size: 36px;
+        line-height: 3rem;
+
+        .art-title {
+            margin: 0 !important;
+        }
+    }
+
+    h2 {
+        font-family: "Merriweather", serif;
+        font-size: 27px;
+    }
+
+    h3 {
+        font-family: "Merriweather", serif;
+        font-size: 20px;
+    }
+
+    a {
+        color: #404eb3;
+    }
+
+    p {
+        font-size: 18px;
+    }
+`;
 
 export interface Post {
     title: string | null;
@@ -69,43 +105,16 @@ const PostPage = ({ post }: Props) => {
                     alignSelf: "center",
                 }}
             >
-                <div
+                <Wrapper
                     style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        margin: "0",
-                        maxWidth: "70%",
-                        width: "100%",
-                        paddingTop: "2rem",
+                        maxWidth: "42rem",
                     }}
                 >
-                    <TextWrapper style={{ fontWeight: 600 }}>
-                        Filippo Fonseca
-                    </TextWrapper>
-                    <TextWrapper target="_blank" href="/">
-                        Back to home
-                    </TextWrapper>
-                </div>
-            </div>
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    alignSelf: "center",
-                }}
-            >
-                <div
-                    style={{
-                        color: "#e4e4e4",
-                        maxWidth: "70%",
-                    }}
-                >
+                    <TextWrapper href="/">All posts</TextWrapper>
                     <BlogHeader post={post} />
 
                     <Markdown content={post.content} />
-                </div>
+                </Wrapper>
             </div>
         </>
     );

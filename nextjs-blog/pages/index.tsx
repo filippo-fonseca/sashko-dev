@@ -21,12 +21,13 @@ interface Props {
 }
 
 export const TextWrapper = styled.a`
-    color: #f5f5f5;
     margin-bottom: 0;
+    color: #404eb3;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 18px;
 
     :hover {
-        text-decoration: underline;
-        color: rgb(84, 104, 132);
+        cursor: pointer;
     }
 `;
 
