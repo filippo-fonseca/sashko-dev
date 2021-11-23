@@ -15,6 +15,7 @@ body {
     font: 112.5%/27px "Source Sans Pro", sans-serif;
     font-family: "Source Sans Pro", sans-serif !important;
     color: hsla(0, 0%, 0%, 0.8);
+    word-wrap: break-word;
 }
 
 a {

@@ -12,6 +12,9 @@ import styled from "styled-components";
 import Head from "next/head";
 import { formatDistanceToNow } from "date-fns";
 import dayjs from "dayjs";
+import GithubIcon from "../core/icons/GitHub";
+import LinkedInIcon from "../core/icons/LinkedInIcon";
+import TwitterIcon from "../core/icons/TwitterIcon";
 
 interface Props {
     posts: Post[];
@@ -34,9 +37,9 @@ const BlogPage = ({ posts }: Props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Seo
-                title="Blog | Filippo Fonseca"
-                url="https://filippofonseca.me/blog"
-                keywords={["blog filippo fonseca", "filippo fonseca blog"]}
+                title="All posts"
+                url="https://sashko.dev"
+                keywords={["blog sashko stubailo", "sashko stubailo blog"]}
                 description="My thoughts on the world - engineering, entrepreneurship, productivity, personal development, tech, and much more - Filippo Fonseca."
             />
             <div
@@ -60,15 +63,51 @@ const BlogPage = ({ posts }: Props) => {
                     }}
                 >
                     <Home>
-                        <h1
-                            style={{
-                                marginTop: "0",
-                                lineHeight: "2.25rem",
-                                marginBottom: 0,
-                            }}
-                        >
-                            Sashko Stubailo
-                        </h1>
+                        <div style={{ display: "flex" }}>
+                            <div style={{ marginRight: "0.75rem" }}>
+                                <h1
+                                    style={{
+                                        marginTop: "0",
+                                        lineHeight: "2.25rem",
+                                        marginBottom: 0,
+                                    }}
+                                >
+                                    Sashko Stubailo
+                                </h1>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    alignItems: "flex-end",
+                                    paddingBottom: "0.25rem",
+                                }}
+                            >
+                                <a
+                                    href="https://github.com/stubailo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ marginRight: "0.375rem" }}
+                                >
+                                    <GithubIcon />
+                                </a>
+                                <a
+                                    href="https://github.com/stubailo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ marginRight: "0.375rem" }}
+                                >
+                                    <LinkedInIcon />
+                                </a>
+                                <a
+                                    href="https://github.com/stubailo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ marginRight: "0.375rem" }}
+                                >
+                                    <TwitterIcon />
+                                </a>
+                            </div>
+                        </div>
                         <p style={{ marginTop: 0 }}>
                             Engineering manager at Stripe. Previously, open
                             source eng manager at Apollo GraphQL and Meteor.
@@ -103,20 +142,19 @@ const BlogPage = ({ posts }: Props) => {
                                                 >
                                                     <div
                                                         style={{
-                                                            height: "6rem",
-                                                            width: "6rem",
+                                                            display: "flex",
+                                                            justifyContent:
+                                                                "center",
+                                                            alignItems:
+                                                                "center",
                                                             marginRight:
                                                                 "1.5rem",
                                                         }}
                                                     >
                                                         <img
                                                             src="https://sashko.dev/static/f685a542f579a4f9a2a0eb05f7b60fcc/8ba1e/autocode.png"
-                                                            height="100%"
-                                                            width="100%"
-                                                            style={{
-                                                                alignSelf:
-                                                                    "center",
-                                                            }}
+                                                            height="108"
+                                                            width="108"
                                                         />
                                                     </div>
                                                     <div>
