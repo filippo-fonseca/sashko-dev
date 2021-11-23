@@ -9,6 +9,7 @@ import Home from "../core/components/Blog/HomeScreen";
 import { BlogCard } from "../core/components/Blog/HomeScreen/styles";
 import Credits from "../core/components/Blog/Credits";
 import styled from "styled-components";
+import Head from "next/head";
 
 interface Props {
     posts: Post[];
@@ -27,6 +28,9 @@ export const TextWrapper = styled.a`
 const BlogPage = ({ posts }: Props) => {
     return (
         <>
+            <Head>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Seo
                 title="Blog | Filippo Fonseca"
                 url="https://filippofonseca.me/blog"
