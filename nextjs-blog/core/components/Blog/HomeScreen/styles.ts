@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    padding: 0 2rem 2rem 2rem;
+    padding: 2.25rem 1.125rem;
     color: hsla(0, 0%, 0%, 0.8);
 
     h1 {

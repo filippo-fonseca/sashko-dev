@@ -58,7 +58,6 @@ const BlogPage = ({ posts }: Props) => {
                         margin: "0",
                         maxWidth: "42rem",
                         width: "100%",
-                        paddingTop: "2rem",
                         flexDirection: "column",
                     }}
                 >
@@ -91,7 +90,7 @@ const BlogPage = ({ posts }: Props) => {
                                     <GithubIcon />
                                 </a>
                                 <a
-                                    href="https://github.com/stubailo"
+                                    href="https://www.linkedin.com/in/stubailo/"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ marginRight: "0.375rem" }}
@@ -99,7 +98,7 @@ const BlogPage = ({ posts }: Props) => {
                                     <LinkedInIcon />
                                 </a>
                                 <a
-                                    href="https://github.com/stubailo"
+                                    href="https://twitter.com/stubailo"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ marginRight: "0.375rem" }}
