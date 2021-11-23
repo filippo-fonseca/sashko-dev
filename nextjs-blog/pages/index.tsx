@@ -10,6 +10,8 @@ import { BlogCard } from "../core/components/Blog/HomeScreen/styles";
 import Credits from "../core/components/Blog/Credits";
 import styled from "styled-components";
 import Head from "next/head";
+import { formatDistanceToNow } from "date-fns";
+import dayjs from "dayjs";
 
 interface Props {
     posts: Post[];
@@ -74,6 +76,18 @@ const BlogPage = ({ posts }: Props) => {
 
                         <div className={""}>
                             {posts.map(post => {
+                                const date = new Date(
+                                    post.updatedAt ?? post.createdAt
+                                );
+
+                                const published =
+                                    dayjs(date).format("MM/DD/YYYY");
+
+                                const updatedAtFull =
+                                    post.updatedAt &&
+                                    formatDistanceToNow(
+                                        new Date(post.updatedAt)
+                                    );
                                 return (
                                     <Link
                                         href={`/blog/${post.slug}`}
@@ -107,7 +121,10 @@ const BlogPage = ({ posts }: Props) => {
                                                     </div>
                                                     <div>
                                                         <h2>{post.title}</h2>
-                                                        <p>{post.intro}</p>
+                                                        <p>
+                                                            {published} •{" "}
+                                                            {post.intro}
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </BlogCard>
