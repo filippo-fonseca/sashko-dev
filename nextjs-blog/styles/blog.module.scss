@@ -42,18 +42,20 @@
 .reactMarkdown {
     margin-top: 1rem;
 
-    a {
-        text-decoration: underline;
-        color: var(--text-color);
-        transition: background 200ms ease-in;
-    }
+    // a {
+    //     text-decoration: underline;
+    //     color: var(--text-color);
+    //     transition: background 200ms ease-in;
+    // }
 
     pre {
         font-family: "CascadiaMono", "Courier New", monospace !important;
-        background: var(--dark) !important;
+        background: var(--light) !important;
         border-radius: 0.3rem;
         overflow-x: auto;
         position: relative;
+        font-size: 0.8rem;
+        padding: 1em;
 
         code {
             font-family: "CascadiaMono", "Courier New", monospace !important;
@@ -72,8 +74,26 @@
 
     code {
         padding: 0.1rem 0.5rem;
-        background: var(--dark);
+        background: var(--light);
         border-radius: 0.3rem;
+        font-size: 14px;
+    }
+
+    img,
+    iframe {
+        display: block;
+        margin: 1rem auto;
+        max-width: 80%;
+    }
+
+    iframe {
+        max-width: 100%;
+        width: 100vw;
+        height: 20vw;
+
+        &.isolated-iframe {
+            height: 25vw;
+        }
     }
 
     h4,
@@ -187,7 +207,7 @@
 
 @media (hover: hover) {
     .rightContainer a:hover {
-        background: var(--dark);
+        background: var(--light);
     }
 }
 

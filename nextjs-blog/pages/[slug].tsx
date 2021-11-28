@@ -39,8 +39,18 @@ const Wrapper = styled.div`
         color: #404eb3;
     }
 
-    p {
+    p,
+    li {
         font-size: 18px;
+    }
+
+    ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+
+    li {
+        list-style: disc;
     }
 `;
 
