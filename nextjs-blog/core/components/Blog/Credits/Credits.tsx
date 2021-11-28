@@ -24,7 +24,6 @@ const customStyles = {
 
 const Wrapper = styled.div`
     bottom: 0;
-    position: absolute;
 
     a {
         color: rgb(84, 104, 132);

@@ -1,9 +1,7 @@
 ---
 title: "Typography.js: Using scale() and rhythm()"
-date: "2020-08-11"
-description: "Using a musical scale to define font sizes and layout"
-imgUrl: "./typography.png"
-published: true
+createdAt: August 11, 2020
+intro: "Using a musical scale to define font sizes and layout"
 ---
 
 Recently I've been working on this blog, starting with the [Gatsby Starter Blog template](https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-blog/). Looking through the code, I noticed a library I wasn't super familiar with: [Typography.js](https://kyleamathews.github.io/typography.js/). I was intrigued to learn a new way to define type styles, especially since it was built by Kyle Mathews, the creator of Gatsby.
@@ -33,7 +31,7 @@ scale(2)  = 17 * 2^2  = 68.0
 
 Let's refer to one multiple of a scale ratio as an "octave" -- just like in a musical scale, where a note double the frequency is called an octave away. Much like each octave in a musical scale is split into 12 notes, we can introduce options in between these sizes to have more sizes to pick from. Let's say that we want to split each octave into 5 notes:
 
-import { ScaleExamples } from './ScaleExamples';
+import { ScaleExamples } from "blog/typography-js/ScaleExamples";
 
 <ScaleExamples />
 
@@ -47,9 +45,9 @@ The above table is generated directly by passing values into the `scale()` funct
 import Typography from "typography";
 
 const theme = {
-  baseFontSize: "17px",
-  baseLineHeight: "26px",
-  scaleRatio: 2
+    baseFontSize: "17px",
+    baseLineHeight: "26px",
+    scaleRatio: 2,
 };
 
 const typography = new Typography(theme);
@@ -89,8 +87,8 @@ const h5 = vr.scale(-1 / 5);
 const h6 = vr.scale(-1.5 / 5);
 
 each([h1, h2, h3, h4, h5, h6], (header, i) => {
-  styles = set(styles, `h${i + 1}.fontSize`, header.fontSize);
-  styles = set(styles, `h${i + 1}.lineHeight`, options.headerLineHeight);
+    styles = set(styles, `h${i + 1}.fontSize`, header.fontSize);
+    styles = set(styles, `h${i + 1}.lineHeight`, options.headerLineHeight);
 });
 ```
 
@@ -114,9 +112,9 @@ Let's look again at our theme, and now also use the `rhythm()` function:
 import Typography from "typography";
 
 const theme = {
-  baseFontSize: "17px",
-  baseLineHeight: "26px",
-  scaleRatio: 2
+    baseFontSize: "17px",
+    baseLineHeight: "26px",
+    scaleRatio: 2,
 };
 
 const typography = new Typography(theme);
@@ -140,7 +138,7 @@ So basically `rhythm()` is just a way for us to define other measurements in ter
 
 ```js
 const el = (
-  <div style={{ height: rhythm(1), marginBottom: rhythm(1.5) }}>Content</div>
+    <div style={{ height: rhythm(1), marginBottom: rhythm(1.5) }}>Content</div>
 );
 ```
 
@@ -152,7 +150,7 @@ If we want our whole page to have a consistent rhythm, this means our line heigh
 
 So, with a base line height of 26px, we get these line heights:
 
-import { LineHeights } from './ScaleExamples';
+import { LineHeights } from "./ScaleExamples";
 
 <LineHeights />
 
@@ -172,10 +170,10 @@ It makes `hr` elements not take up any space, to not offset the rhythm by an ext
 
 ```js
 styles = setStyles(styles, "hr", {
-  background: gray(80),
-  border: "none",
-  height: "1px",
-  marginBottom: `calc(${blockMarginBottom} - 1px)`
+    background: gray(80),
+    border: "none",
+    height: "1px",
+    marginBottom: `calc(${blockMarginBottom} - 1px)`,
 });
 ```
 
@@ -184,9 +182,9 @@ It sets margin on list elements to match the rhythm:
 ```js
 // ol, ul.
 styles = setStyles(styles, ["ol", "ul"], {
-  listStylePosition: "outside",
-  listStyleImage: "none",
-  marginLeft: vr.rhythm(1)
+    listStylePosition: "outside",
+    listStyleImage: "none",
+    marginLeft: vr.rhythm(1),
 });
 ```
 
@@ -198,27 +196,27 @@ After using `injectStyles` to set default styles for semantic HTML components, y
 
 ```js
 <header
-  style={{
-    maxWidth: rhythm(20),
-    marginBottom: rhythm(2)
-  }}
+    style={{
+        maxWidth: rhythm(20),
+        marginBottom: rhythm(2),
+    }}
 >
-  <div style={{ display: "flex", alignItems: "baseline" }}>
-    <h1
-      style={{
-        marginBottom: 0,
-        marginRight: rhythm(1 / 2),
-        ...scale(3 / 5)
-      }}
-    >
-      {data.site.siteMetadata.title}
-    </h1>
-    <SocialIcons {...data.site.siteMetadata.social} />
-  </div>
+    <div style={{ display: "flex", alignItems: "baseline" }}>
+        <h1
+            style={{
+                marginBottom: 0,
+                marginRight: rhythm(1 / 2),
+                ...scale(3 / 5),
+            }}
+        >
+            {data.site.siteMetadata.title}
+        </h1>
+        <SocialIcons {...data.site.siteMetadata.social} />
+    </div>
 
-  <p style={{ marginBottom: rhythm(1 / 2) }}>
-    {data.site.siteMetadata.description}
-  </p>
+    <p style={{ marginBottom: rhythm(1 / 2) }}>
+        {data.site.siteMetadata.description}
+    </p>
 </header>
 ```
 

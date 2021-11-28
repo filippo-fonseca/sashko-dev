@@ -12,4 +12,16 @@ export const PostDirectory = [
         imgURL: "blog/first-steps-eng-management/office.jpg",
     },
     { title: "Games in the cloud", imgURL: "blog/games-in-the-cloud/civ.jpg" },
+    {
+        title: "Should you work toward a promotion?",
+        imgURL: "blog/promotions/mountain-jerry-zhang.jpg",
+    },
+    {
+        title: "Show, don't tell: Effective resumes for engineers",
+        imgURL: "blog/resumes/writing.jpg",
+    },
+    // {
+    //     title: "Typography.js: Using scale() and rhythm()",
+    //     imgURL: "blog/typography-js/typography.png",
+    // },
 ];
