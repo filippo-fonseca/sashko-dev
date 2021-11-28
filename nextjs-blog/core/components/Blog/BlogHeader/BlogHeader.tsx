@@ -45,7 +45,7 @@ export const BlogHeader = ({ post }: Props) => {
             <div>
                 <div>
                     <Title className="art-title">{post.title}</Title>
-                    <Description>Hello World</Description>
+                    <Description>{post.intro}</Description>
                     <AuthorBubble>
                         <img src="https://sashko.dev/static/ae916ab87b655a18fe7fc221479a0abe/99438/profile-pic.jpg" />
                         <div

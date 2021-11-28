@@ -15,6 +15,7 @@ import dayjs from "dayjs";
 import GithubIcon from "../core/icons/GitHub";
 import LinkedInIcon from "../core/icons/LinkedInIcon";
 import TwitterIcon from "../core/icons/TwitterIcon";
+import { matchThumbnailToPost } from "../core/lib/matchThumbnailToPost";
 
 interface Props {
     posts: Post[];
@@ -115,7 +116,7 @@ const BlogPage = ({ posts }: Props) => {
                         </p>
 
                         <div className={""}>
-                            {posts.map(post => {
+                            {posts.map((post, idx) => {
                                 const date = new Date(
                                     post.updatedAt ?? post.createdAt
                                 );
@@ -130,7 +131,7 @@ const BlogPage = ({ posts }: Props) => {
                                     );
                                 return (
                                     <Link
-                                        href={`/blog/${post.slug}`}
+                                        href={`/${post.slug}`}
                                         key={post.slug}
                                     >
                                         <a
@@ -153,7 +154,9 @@ const BlogPage = ({ posts }: Props) => {
                                                         }}
                                                     >
                                                         <img
-                                                            src="https://sashko.dev/static/f685a542f579a4f9a2a0eb05f7b60fcc/8ba1e/autocode.png"
+                                                            src={matchThumbnailToPost(
+                                                                post.title
+                                                            )}
                                                             height="108"
                                                             width="108"
                                                         />

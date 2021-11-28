@@ -1,9 +1,7 @@
 ---
-title: Unlocking my email data for fun and carbon offsets
-date: "2020-04-15"
-description: What if there was a tool that let you scrape your inbox with a single for loop?
-imgUrl: "./ride-results.png"
-published: false
+title: "Unlocking my email data for fun and carbon offsets"
+createdAt: April 15, 2020
+intro: "What if there was a tool that let you scrape your inbox with a single for loop?"
 ---
 
 For a while now, I've been dissatisfied with how hard it is for me as an individual to use the data I have wrapped up in various online services. Data has moved from existing locally on my computer to thousands of different cloud services - Gmail, Messenger, Google Docs, etc. These services sometimes offer APIs to get the data out, but it takes a lot of work to actually retrieve it if all you want to do is write a quick script.
@@ -33,7 +31,7 @@ TODO image
 
 Then, it was pretty straightforward to add up the distances and multiply times the carbon emissions per mile for the average car:
 
-![total miles: 1178, total kg co2: 484](./ride-results.png)
+![total miles: 1178, total kg co2: 484](/blog/email-scraper/ride-results.png)
 
 Exciting! Getting these initial results got me fired up to tackle a more complex challenge: flights.
 
@@ -43,9 +41,9 @@ Gathering flight data from email turned out to be dramatically more complicated 
 
 My goal was, for each provider, to identify the start and end of each flight, and use that to calculate the distance and therefore the carbon impact. Here was my journey:
 
-- I started with Chase travel, which was pretty reasonable,
-- Moved on to Southwest, and got that done,
-- I wasn't able to reasonably parse the start/end of a flight out of a United email, and decided to move on
+-   I started with Chase travel, which was pretty reasonable,
+-   Moved on to Southwest, and got that done,
+-   I wasn't able to reasonably parse the start/end of a flight out of a United email, and decided to move on
 
 Figuring out how to reasonably parse a diverse set of emails is a problem I hope to think about more in the future - the approach I'm using works well for well-structured, uniform emails from Lyft and Uber, but not for these diverse, sometimes poorly formatted flight system emails.
 
