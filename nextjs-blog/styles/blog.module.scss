@@ -79,12 +79,19 @@
         font-size: 14px;
     }
 
+    // img,
+    // iframe {
+    //     display: block;
+    //     margin: 1rem auto;
+    //     max-width: 80%;
+    //     height: 600px;
+    // }
+
     img,
     iframe {
         display: block;
         margin: 1rem auto;
-        max-width: 80%;
-        height: 600px;
+        max-width: 100%;
     }
 
     iframe {

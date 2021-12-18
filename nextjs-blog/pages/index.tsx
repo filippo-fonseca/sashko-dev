@@ -175,8 +175,7 @@ const BlogPage = ({ posts }: Props) => {
                                 );
                             })}
                         </div>
-                        <Credits />
-                    </Home>
+                        <Credits />                    </Home>
                 </div>
             </div>
         </>
