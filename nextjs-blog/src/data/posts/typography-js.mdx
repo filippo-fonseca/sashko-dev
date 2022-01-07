@@ -31,8 +31,6 @@ scale(2)  = 17 * 2^2  = 68.0
 
 Let's refer to one multiple of a scale ratio as an "octave" -- just like in a musical scale, where a note double the frequency is called an octave away. Much like each octave in a musical scale is split into 12 notes, we can introduce options in between these sizes to have more sizes to pick from. Let's say that we want to split each octave into 5 notes:
 
-import { ScaleExamples } from "blog/typography-js/ScaleExamples";
-
 <ScaleExamples />
 
 Now, we've got a selection of sizes that all have consistent ratios between themselves. I'm not sure whether or not these sizes are more pleasing to the eye than hand-picked ones, but it is convenient that we can easily generate additional font sizes without worrying about keeping consistency across all parts of our design.
@@ -149,8 +147,6 @@ If we do this consistently, then whenever we stack elements on top of each other
 If we want our whole page to have a consistent rhythm, this means our line heights need to snap to that rhythm as well. That's where the `lineHeight` part of `scale()` comes in -- it scales up the line height proportional to the font size, and then [rounds it to the nearest 1/2 rhythm](https://github.com/KyleAMathews/typography.js/blob/master/docs/what.md#adhere-to-a-vertical-rhythm-when-possible).
 
 So, with a base line height of 26px, we get these line heights:
-
-import { LineHeights } from "./ScaleExamples";
 
 <LineHeights />
 
