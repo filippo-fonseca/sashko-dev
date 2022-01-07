@@ -69,3 +69,5 @@ The following is an example:
 This will be responsible for the thumbnail of the article showing up in the home page (All POsts) section.
 
 And... you're done! Congrats and happy writing 🎉
+
+If you have any questions, reach out to me via **filifonsecacagnazzo@gmail.com** or [**Twitter**](https://twitter.com/FilippoFonseca).
