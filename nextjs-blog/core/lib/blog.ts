@@ -25,15 +25,15 @@ export function getSlugsFromDir(dir: string): string[] {
 
 export type Fields<T> = (keyof T)[];
 export type PickT<T> = Pick<T, keyof T>;
-type Types = "posts" | "snippets" | "case-studies";
+type Types = "posts";
 
 export async function getAllItems<T extends Post>(
     type: Types,
     fields: Fields<T> = []
 ): Promise<PickT<T>[]> {
-    const slugs = getSlugsFromDir(
-        join(process.cwd(), "src", "data", type)
-    ).filter(v => /\.mdx?$/.test(v));
+    const slugs = getSlugsFromDir(join(process.cwd(), "src", type)).filter(v =>
+        /\.mdx?$/.test(v)
+    );
 
     const posts = await Promise.all(
         slugs.map(async slug => getItemBySlug<T>(slug, type, fields))
@@ -51,7 +51,7 @@ export async function getItemBySlug<T = unknown>(
     type: Types,
     fields: Fields<T> = []
 ): Promise<PickT<T>> {
-    const dir = join(process.cwd(), "src", "data", type);
+    const dir = join(process.cwd(), "src", type);
     const realSlug = slug.replace(/\.mdx$/, "");
     const fullPath = join(dir, `${realSlug}.mdx`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
