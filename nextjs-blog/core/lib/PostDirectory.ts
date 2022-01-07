@@ -20,8 +20,8 @@ export const PostDirectory = [
         title: "Show, don't tell: Effective resumes for engineers",
         imgURL: "blog/resumes/writing.jpg",
     },
-    // {
-    //     title: "Typography.js: Using scale() and rhythm()",
-    //     imgURL: "blog/typography-js/typography.png",
-    // },
+    {
+        title: "Typography.js: Using scale() and rhythm()",
+        imgURL: "blog/typography-js/typography.png",
+    },
 ];
