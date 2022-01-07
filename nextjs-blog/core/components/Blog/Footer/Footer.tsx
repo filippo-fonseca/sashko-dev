@@ -1,12 +1,9 @@
 import React from "react";
+import Modal from "react-modal";
 import styled from "styled-components";
-
-// // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-// Modal.setAppElement("#yourAppElement");
 
 const Wrapper = styled.div`
     bottom: 0;
-    position: absolute;
 
     a {
         color: rgb(84, 104, 132);
@@ -25,9 +22,11 @@ const Start = styled.p`
 `;
 
 const Footer = () => {
+    const year = new Date().getFullYear();
+
     return (
         <Wrapper>
-            <Start>© Sashko Stubailo 2021</Start>
+            <Start>© Sashko Stubailo {year}</Start>
         </Wrapper>
     );
 };

@@ -151,7 +151,8 @@
     cursor: pointer;
     border: none;
     background-color: var(--secondary);
-    color: var(--text-color);
+    color: var(--dark);
+    font-weight: 550;
 
     border-bottom-left-radius: 0.5rem;
     transition: opacity 150ms;

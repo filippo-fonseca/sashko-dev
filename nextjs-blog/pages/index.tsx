@@ -7,7 +7,7 @@ import { Seo } from "../core/components/Seo";
 import { getAllItems } from "../core/lib/blog";
 import Home from "../core/components/Blog/HomeScreen";
 import { BlogCard } from "../core/components/Blog/HomeScreen/styles";
-import Credits from "../core/components/Blog/Credits";
+import Footer from "../core/components/Blog/Footer";
 import styled from "styled-components";
 import Head from "next/head";
 import { formatDistanceToNow } from "date-fns";
@@ -114,7 +114,6 @@ const BlogPage = ({ posts }: Props) => {
                             Engineering manager at Stripe. Previously, open
                             source eng manager at Apollo GraphQL and Meteor.
                         </p>
-
                         <div className={""}>
                             {posts.map((post, idx) => {
                                 const date = new Date(
@@ -175,7 +174,8 @@ const BlogPage = ({ posts }: Props) => {
                                 );
                             })}
                         </div>
-                        <Credits />                    </Home>
+                        <Footer />
+                    </Home>
                 </div>
             </div>
         </>

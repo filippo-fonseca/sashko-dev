@@ -8,6 +8,7 @@ import { Seo } from "../core/components/Seo";
 import { Markdown } from "../core/components/Markdown";
 import { TextWrapper } from ".";
 import styled from "styled-components";
+import Footer from "../core/components/Blog/Footer";
 
 const Wrapper = styled.div`
     padding: 2.25rem 1.125rem;
@@ -124,6 +125,7 @@ const PostPage = ({ post }: Props) => {
                     <BlogHeader post={post} />
 
                     <Markdown content={post.content} />
+                    <Footer />
                 </Wrapper>
             </div>
         </>

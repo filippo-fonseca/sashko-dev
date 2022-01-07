@@ -16,8 +16,6 @@ Let’s add a button to our browser that just pops up a dialog that says “Hell
 javascript:alert('Hello, world')
 ```
 
-<img src="/prof.png" />
-
 (You can also test it by pasting that into your URL bar without creating a bookmark.)
 
 Now, open the bookmark. You’ll note that instead of going to a page, it’ll open a dialog on the page that says “Hello, world!”
@@ -53,7 +51,7 @@ javascript:window.location=%22https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=
 
 Here’s a gif of this bookmark in action on an iPad:
 
-![Animated gif showing how you can open the bookmarklet while looking at a page on The Verge, and it opens a new email in Gmail with a link to that page](./bookmarklets/sendwithgmail.gif)
+![Animated gif showing how you can open the bookmarklet while looking at a page on The Verge, and it opens a new email in Gmail with a link to that page](blog/bookmarklets/sendwithgmail.gif)
 
 First, we have to make sure the code is a valid URL. So we’ve added javascript: to the front to tell the browser this is JavaScript, and replaced special characters with escape sequences. For example, double quotes in URLs need to be replaced with %22.
 
@@ -90,7 +88,7 @@ javascript:window.location=%22things:///add?title=%22+encodeURIComponent(documen
 
 The link won’t do anything if you don’t have Things installed, so here’s a gif to show you what this looks like on an iPad:
 
-![Animated gif showing that you can open a bookmark and it adds a task in the Things app](./bookmarklets/addtothings.gif)
+![Animated gif showing that you can open a bookmark and it adds a task in the Things app](blog/bookmarklets/addtothings.gif)
 
 You can read about all of the different URLs Things supports [in their docs](https://support.culturedcode.com/customer/en/portal/articles/2803573).
 
